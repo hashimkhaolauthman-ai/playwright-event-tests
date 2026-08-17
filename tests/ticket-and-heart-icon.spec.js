@@ -3,6 +3,8 @@ import { test, expect } from "@playwright/test";
 test.describe('Bookt Game Night event', () => {
 
 	test('shows error toast when paid ticket has invalid email input', async ({ page }) => {
+		page.on('dialog', (dialog) => dialog.accept());
+
 		await page.goto('https://event-staging.getbookt.io/game-night-15680');
 
 		const buyTicketButton = page.getByText('Buy ticket');
