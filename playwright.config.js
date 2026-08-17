@@ -6,7 +6,6 @@ export default defineConfig({
   use: {
     // Use system Chrome to share native Windows DNS/VPN settings
     channel: 'chrome',
-    headless: false,
     viewport: { width: 1280, height: 720 },
     ignoreHTTPSErrors: true,
     actionTimeout: 15000,
